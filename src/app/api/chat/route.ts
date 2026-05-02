@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await request.json();
+    const body = await req.json();
     const { message, userContext, language = 'en', topic } = body;
 
     if (!message || typeof message !== 'string') {
